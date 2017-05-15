@@ -3,18 +3,13 @@
     
     <!-- <router-link to="/hello">hello</router-link> -->
     <!-- <router-link to="/world">world</router-link> -->
-    <router-view v-on:upEvent="alertNum"  message='你好'></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: 'app',
-  data:function(){
-    return {
-      message:'父组件数据'
-    }
-  },
   methods:{
     alertNum:function(){
       alert(1)

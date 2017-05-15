@@ -1,6 +1,7 @@
 <template>
   <div class="equip">
-    <router-link to='/'>&lt;</router-link>
+    
+    <button type="button" class="btn btn-primary btn-lg btn-block"><router-link to='/' >&lt;返回主页</router-link></button>
     <div class="row">
 
       <div class="col-sm-1 col-md-1" v-for="(item,index) in equip">
@@ -50,7 +51,6 @@ export default {
       //var length = document.querySelectorAll('.caption').length;
       //console.log(length)
       this.getEquip();
-      alert(this.message)
       
   },
   mounted:function(){
@@ -66,7 +66,7 @@ export default {
 
     getEquip:function(){
         // GET /someUrl 
-        this.$emit('upEvent')
+
         this.$http.get('../../static/equip.json').then(response => {
           
           // get body data 
